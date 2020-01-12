@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Postman - Reports</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+        //custom script
+        $(function(){
+            $('.panel').filter(function(){ return $('.tego-bg-red', this).length})
+                    .find('.panel-heading')
+                    .removeClass('tego-bg-green')
+                    .addClass('tego-bg-red')
+        })
+  </script>
+    <style>
+        .tego-bg-red .panel-title, .tego-bg-green .panel-title {
+            color: #fff;
+        }
+        .tego-bg-red {
+            background-color: #e74c3c !important;
+        }
+        .tego-bg-green {
+            background-color: #27ae60 !important;
+        }
+        .tego-color-red {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .tego-color-green {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+    <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Test Run Information</div>
+        <div class="panel-body">
+            <div class="col-md-3">Collection</div><div class="col-md-9">com.kk.sample.postman.api</div>
+            <div class="col-md-3">Environment</div><div class="col-md-9">host-fakejson</div>
+            <div class="col-md-3">Time of Run</div><div class="col-md-9">Sat Jan 11 2020 11:43:59 GMT-0600 (Central Standard Time)</div>
+        </div>
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">Test Run Summary</div>
+        <div class="panel-body">
+                <div class="col-md-4">Iterations</div><div class="col-md-4">1</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Requests</div><div class="col-md-4">10</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Prerequest Scripts</div><div class="col-md-4">27</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Test Scripts</div><div class="col-md-4">29</div><div class="col-md-4">0</div>
+                <div class="col-md-4">Assertions</div><div class="col-md-4">37</div><div class="col-md-4 tego-color-red">3</div>
+
+                <div class="col-md-12">&nbsp;</div>
+                <div class="col-md-6">Total run duration</div><div class="col-md-2">9.8s</div>
+                <div class="col-md-6">Total data received</div><div class="col-md-2">4.24KB (approx)</div>
+                <div class="col-md-6">Average response time</div><div class="col-md-2">931ms</div>
+
+                <div class="col-md-12">&nbsp;</div>
+                <div class="col-md-3"><strong>Total Failures</strong></div><div class="col-md-2  tego-color-red"><strong>3</strong></div>
+
+        </div>
+    </div>
+    </div>
+
+    <br/><strong><h2>Requests</h2></strong>
+
+        <div class="panel-group" id="collapse-folder-8f92dbe7-0b3b-4bf2-82c4-ef59a5c52fc4" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-8f92dbe7-0b3b-4bf2-82c4-ef59a5c52fc4">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-8f92dbe7-0b3b-4bf2-82c4-ef59a5c52fc4" aria-controls="collapseOne"><strong>Training 01 : Manual Validation test cases for module photo </strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-8f92dbe7-0b3b-4bf2-82c4-ef59a5c52fc4" class="panel-collapse collapsed" role="tabpanel" aria-labelledby="folderHead-8f92dbe7-0b3b-4bf2-82c4-ef59a5c52fc4">
+                    <div class="panel-group" id="collapse-request-5b92a19e-3b9c-41f1-b2f6-584e337ad8fa" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-5b92a19e-3b9c-41f1-b2f6-584e337ad8fa">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-5b92a19e-3b9c-41f1-b2f6-584e337ad8fa" aria-controls="collapseOne">T001-01-Post registration</a></h4>
+                            </div>
+            
+                            <div id="requestData-5b92a19e-3b9c-41f1-b2f6-584e337ad8fa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-5b92a19e-3b9c-41f1-b2f6-584e337ad8fa">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">1720ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">188B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;registration&quot;: {
+                &quot;first&quot;: &quot;Karlin&quot;,
+                &quot;lastname&quot;: &quot;kappala&quot;,
+                &quot;phone&quot;: &quot;987-123-1234&quot;,
+                &quot;email&quot;: &quot;kk@gmail.com&quot;,
+                &quot;address&quot;: &quot;Room 1234, chicago, IL&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-bdb15bb6-7da1-4545-af49-607ab5547a5c" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-bdb15bb6-7da1-4545-af49-607ab5547a5c">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-bdb15bb6-7da1-4545-af49-607ab5547a5c" aria-controls="collapseOne">T001-02 -Post one photograph </a></h4>
+                            </div>
+            
+                            <div id="requestData-bdb15bb6-7da1-4545-af49-607ab5547a5c" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-bdb15bb6-7da1-4545-af49-607ab5547a5c">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">1292ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">489B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;0&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0000_yC-Yzbqy7PY.jpeg&quot;,
+                &quot;id&quot;: 101,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;
+              },
+              &quot;1&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0001_LNRyGwIJr5c.jpeg&quot;,
+                &quot;id&quot;: 102,
+                &quot;author&quot;: &quot;Alejandro Escamilla&quot;,
+                &quot;author_url&quot;: &quot;https://unsplash.com/@alejandroescamilla&quot;,
+                &quot;post_url&quot;: &quot;https://unsplash.com/photos/LNRyGwIJr5c&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-e4ceecf2-2215-41fc-899e-78d28ee17c9d" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-e4ceecf2-2215-41fc-899e-78d28ee17c9d">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-e4ceecf2-2215-41fc-899e-78d28ee17c9d" aria-controls="collapseOne">T001-03-Post two photographs with comments</a></h4>
+                            </div>
+            
+                            <div id="requestData-e4ceecf2-2215-41fc-899e-78d28ee17c9d" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-e4ceecf2-2215-41fc-899e-78d28ee17c9d">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">1930ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">772B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;0&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0000_yC-Yzbqy7PY.jpeg&quot;,
+                &quot;id&quot;: 10110,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;,
+                &quot;comment&quot;: {
+                  &quot;postId&quot;: 21,
+                  &quot;id&quot;: 101,
+                  &quot;name&quot;: &quot;perspiciatis magnam ut eum autem similique explicabo expedita&quot;,
+                  &quot;email&quot;: &quot;Lura@rod.tv&quot;,
+                  &quot;body&quot;: &quot;ut aut maxime officia sed aliquam et magni autem\nveniam repudiandae nostrum odio enim eum optio aut\nomnis illo quasi quibusdam inventore explicabo\nreprehenderit dolor saepe possimus molestiae&quot;
+                }
+              },
+              &quot;1&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0001_LNRyGwIJr5c.jpeg&quot;,
+                &quot;id&quot;: 10212,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-e646270a-a159-473b-bef0-f00532ceacf0" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-e646270a-a159-473b-bef0-f00532ceacf0">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-e646270a-a159-473b-bef0-f00532ceacf0" aria-controls="collapseOne">T001 - 03 GET comments information</a></h4>
+                            </div>
+            
+                            <div id="requestData-e646270a-a159-473b-bef0-f00532ceacf0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-e646270a-a159-473b-bef0-f00532ceacf0">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/comments/101" target="_blank">https://jsonplaceholder.typicode.com/comments/101</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">45ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">340B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;postId&quot;: 21,
+              &quot;id&quot;: 101,
+              &quot;name&quot;: &quot;perspiciatis magnam ut eum autem similique explicabo expedita&quot;,
+              &quot;email&quot;: &quot;Lura@rod.tv&quot;,
+              &quot;body&quot;: &quot;ut aut maxime officia sed aliquam et magni autem\nveniam repudiandae nostrum odio enim eum optio aut\nomnis illo quasi quibusdam inventore explicabo\nreprehenderit dolor saepe possimus molestiae&quot;
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-b95992e7-4fac-4888-a73c-0a57fa86b8bb" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-b95992e7-4fac-4888-a73c-0a57fa86b8bb">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-b95992e7-4fac-4888-a73c-0a57fa86b8bb" aria-controls="collapseOne">T001 - 06 PUT update the author and author email address </a></h4>
+                            </div>
+            
+                            <div id="requestData-b95992e7-4fac-4888-a73c-0a57fa86b8bb" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-b95992e7-4fac-4888-a73c-0a57fa86b8bb">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">PUT</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts/1" target="_blank">https://jsonplaceholder.typicode.com/posts/1</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">953ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">760B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;0&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0000_yC-Yzbqy7PY.jpeg&quot;,
+                &quot;id&quot;: 10110,
+                &quot;author&quot;: &quot;Sven&quot;,
+                &quot;author_url&quot;: &quot;ST&quot;,
+                &quot;comment&quot;: {
+                  &quot;postId&quot;: 21,
+                  &quot;id&quot;: 101,
+                  &quot;name&quot;: &quot;perspiciatis magnam ut eum autem similique explicabo expedita&quot;,
+                  &quot;email&quot;: &quot;Lura@rod.tv&quot;,
+                  &quot;body&quot;: &quot;ut aut maxime officia sed aliquam et magni autem\nveniam repudiandae nostrum odio enim eum optio aut\nomnis illo quasi quibusdam inventore explicabo\nreprehenderit dolor saepe possimus molestiae&quot;
+                }
+              },
+              &quot;1&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0001_LNRyGwIJr5c.jpeg&quot;,
+                &quot;id&quot;: 10212,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;
+              },
+              &quot;id&quot;: 1
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-457b241d-2804-47a9-b12e-f1ff1cd0c347" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-457b241d-2804-47a9-b12e-f1ff1cd0c347">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-457b241d-2804-47a9-b12e-f1ff1cd0c347" aria-controls="collapseOne">T001 - 07 DELTE the photo</a></h4>
+                            </div>
+            
+                            <div id="requestData-457b241d-2804-47a9-b12e-f1ff1cd0c347" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-457b241d-2804-47a9-b12e-f1ff1cd0c347">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">DELETE</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts/101" target="_blank">https://jsonplaceholder.typicode.com/posts/101</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">458ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">2B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">0</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{}</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="panel-group" id="collapse-folder-67090fc1-db31-4bfa-aede-7bea99f9cbea" role="tablist" aria-multiselectable="true">
+            <div role="tab" id="folderHead-67090fc1-db31-4bfa-aede-7bea99f9cbea">
+                <h4 style="font-size: 18px;" class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#folderData-67090fc1-db31-4bfa-aede-7bea99f9cbea" aria-controls="collapseOne"><strong>Training 02: Automation Validation test cases for module photo  Copy</strong></a></h4>
+            </div>
+            <br/>
+            <div id="folderData-67090fc1-db31-4bfa-aede-7bea99f9cbea" class="panel-collapse collapsed" role="tabpanel" aria-labelledby="folderHead-67090fc1-db31-4bfa-aede-7bea99f9cbea">
+                    <div class="panel-group" id="collapse-request-ed6494ff-cb98-4234-9a2a-af34f10befe5" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-red" role="tab" id="requestHead-ed6494ff-cb98-4234-9a2a-af34f10befe5">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-ed6494ff-cb98-4234-9a2a-af34f10befe5" aria-controls="collapseOne">T001-01-Post registration</a></h4>
+                            </div>
+            
+                            <div id="requestData-ed6494ff-cb98-4234-9a2a-af34f10befe5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-ed6494ff-cb98-4234-9a2a-af34f10befe5">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">1218ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">188B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">9</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">1</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;registration&quot;: {
+                &quot;first&quot;: &quot;Karlin&quot;,
+                &quot;lastname&quot;: &quot;kappala&quot;,
+                &quot;phone&quot;: &quot;987-123-1234&quot;,
+                &quot;email&quot;: &quot;kk@gmail.com&quot;,
+                &quot;address&quot;: &quot;Room 1234, chicago, IL&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Test Case 01  Verify if the test returns status code 201</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 02 Verify if the response time &lt; 500ms</td><td >0</td><td  class="tego-bg-red">1</td></tr><tr><td>Test Case 03: Body matches string</td><td  class="tego-bg-green">2</td><td >0</td></tr><tr><td>Test Case 03 :Body matches string</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 04: Body matches string</td><td  class="tego-bg-green">4</td><td >0</td></tr><tr><td>Test Case 06: Content-Type is present</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                            </table>
+                                        </div><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-5053ab96-0b1e-4ae7-a462-20689b9eb197" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-red" role="tab" id="requestHead-5053ab96-0b1e-4ae7-a462-20689b9eb197">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-5053ab96-0b1e-4ae7-a462-20689b9eb197" aria-controls="collapseOne">T001-02 -Post one photograph </a></h4>
+                            </div>
+            
+                            <div id="requestData-5053ab96-0b1e-4ae7-a462-20689b9eb197" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-5053ab96-0b1e-4ae7-a462-20689b9eb197">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">846ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">489B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">10</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">1</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;0&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0000_yC-Yzbqy7PY.jpeg&quot;,
+                &quot;id&quot;: 101,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;
+              },
+              &quot;1&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0001_LNRyGwIJr5c.jpeg&quot;,
+                &quot;id&quot;: 102,
+                &quot;author&quot;: &quot;Alejandro Escamilla&quot;,
+                &quot;author_url&quot;: &quot;https://unsplash.com/@alejandroescamilla&quot;,
+                &quot;post_url&quot;: &quot;https://unsplash.com/photos/LNRyGwIJr5c&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Test Case 01  Verify if the test returns status code 201</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 02 Verify if the response time &lt; 500ms</td><td >0</td><td  class="tego-bg-red">1</td></tr><tr><td>Test Case 03: Body matches string</td><td  class="tego-bg-green">2</td><td >0</td></tr><tr><td>Test Case 03 :Body matches string</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 04: Body matches string</td><td  class="tego-bg-green">5</td><td >0</td></tr><tr><td>Test Case 06: Content-Type is present</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                            </table>
+                                        </div><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-46253f2c-5c0b-4f41-bddb-d73fe8a2f593" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-red" role="tab" id="requestHead-46253f2c-5c0b-4f41-bddb-d73fe8a2f593">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-46253f2c-5c0b-4f41-bddb-d73fe8a2f593" aria-controls="collapseOne">T001-03-Post two photographs with comments</a></h4>
+                            </div>
+            
+                            <div id="requestData-46253f2c-5c0b-4f41-bddb-d73fe8a2f593" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-46253f2c-5c0b-4f41-bddb-d73fe8a2f593">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">POST</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">812ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">772B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">10</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">1</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">201</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;0&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0000_yC-Yzbqy7PY.jpeg&quot;,
+                &quot;id&quot;: 10110,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;,
+                &quot;comment&quot;: {
+                  &quot;postId&quot;: 21,
+                  &quot;id&quot;: 101,
+                  &quot;name&quot;: &quot;perspiciatis magnam ut eum autem similique explicabo expedita&quot;,
+                  &quot;email&quot;: &quot;Lura@rod.tv&quot;,
+                  &quot;body&quot;: &quot;ut aut maxime officia sed aliquam et magni autem\nveniam repudiandae nostrum odio enim eum optio aut\nomnis illo quasi quibusdam inventore explicabo\nreprehenderit dolor saepe possimus molestiae&quot;
+                }
+              },
+              &quot;1&quot;: {
+                &quot;format&quot;: &quot;jpeg&quot;,
+                &quot;width&quot;: 5616,
+                &quot;height&quot;: 3744,
+                &quot;filename&quot;: &quot;0001_LNRyGwIJr5c.jpeg&quot;,
+                &quot;id&quot;: 10212,
+                &quot;author&quot;: &quot;Karlin Kappala&quot;,
+                &quot;author_url&quot;: &quot;kk&quot;
+              },
+              &quot;id&quot;: 101
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>Test Case 01  Verify if the test returns status code 201</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 02 Verify if the response time &lt; 500ms</td><td >0</td><td  class="tego-bg-red">1</td></tr><tr><td>Test Case 03: Body matches string</td><td  class="tego-bg-green">2</td><td >0</td></tr><tr><td>Test Case 03 :Body matches string</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Test Case 04: Body matches string</td><td  class="tego-bg-green">5</td><td >0</td></tr><tr><td>Test Case 06: Content-Type is present</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                            </table>
+                                        </div><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-group" id="collapse-request-960e1644-60ae-48e0-a2bc-d936c0b39489" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading tego-bg-green" role="tab" id="requestHead-960e1644-60ae-48e0-a2bc-d936c0b39489">
+                                <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#requestData-960e1644-60ae-48e0-a2bc-d936c0b39489" aria-controls="collapseOne">T001 - 03 GET comments information</a></h4>
+                            </div>
+            
+                            <div id="requestData-960e1644-60ae-48e0-a2bc-d936c0b39489" class="panel-collapse collapse" role="tabpanel" aria-labelledby="requestHead-960e1644-60ae-48e0-a2bc-d936c0b39489">
+                                <div class="panel-body">
+            
+                                        <div class="col-md-4">Method</div><div class="col-md-8"><h4><span class="label label-success">GET</span></h4></div>
+                                        <div class="col-md-4">URL</div><div class="col-md-8"><a href="https://jsonplaceholder.typicode.com/comments/101" target="_blank">https://jsonplaceholder.typicode.com/comments/101</a></div>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <div class="col-md-4">Mean time per request</div><div class="col-md-8">42ms</div><br/>
+                                    <div class="col-md-4">Mean size per request</div><div class="col-md-8">340B</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Total passed tests</div><div class="total-passed col-md-8">5</div>
+                                    <div class="col-md-4">Total failed tests</div><div class="total-failed col-md-8">0</div><br/>
+            
+                                    <div class="col-md-12">&nbsp;</div>
+                                    <br/><div class="col-md-4">Status code</div><div class="col-md-8">200</div><br/>
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <br/><div class="col-md-4">Response body</div><div class="col-md-8"><textarea name="jsonData" disabled rows="8" cols="70" style="margin: 0px; width: 629px; height: 255px; font-size: 17px; color: green;">{
+              &quot;postId&quot;: 21,
+              &quot;id&quot;: 101,
+              &quot;name&quot;: &quot;perspiciatis magnam ut eum autem similique explicabo expedita&quot;,
+              &quot;email&quot;: &quot;Lura@rod.tv&quot;,
+              &quot;body&quot;: &quot;ut aut maxime officia sed aliquam et magni autem\nveniam repudiandae nostrum odio enim eum optio aut\nomnis illo quasi quibusdam inventore explicabo\nreprehenderit dolor saepe possimus molestiae&quot;
+            }</textarea></div><br/>
+                                        <!-- <div><button type="button" class="btn btn-info" onclick="prettyPrint()"><span class="glyphicon glyphicon-align-center"></span> Pretty Print</button></div> -->
+            
+                                        <div class="col-md-12">&nbsp;</div>
+                                        <div class="col-md-4">Tests</div>
+            
+                                        <div class="col-md-8">
+                                            <table class="table table-responsive table-condensed">
+                                                <thead><tr><th>Name</th><th>Pass count</th><th>Fail count</th></tr></thead>
+                                                <tbody><tr><td>status code is 200</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Body matches string postId</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Body matches string id</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Body matches string access email</td><td  class="tego-bg-green">1</td><td >0</td></tr><tr><td>Body matches string access body</td><td  class="tego-bg-green">1</td><td >0</td></tr></tbody>
+                                            </table>
+                                        </div><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
+
