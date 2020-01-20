@@ -45,9 +45,12 @@
 							"raw": "{\n  \"registration\": {\n    \"first\": \"Karlin\",\n    \"lastname\": \"kappala\",\n    \"phone\": \"987-123-1234\",\n    \"email\": \"kk@gmail.com\",\n    \"address\": \"Room 1234, chicago, IL\"\n  }\n}"
 						},
 						"url": {
-							"raw": "{{host-fakejson}}/posts",
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
 							"host": [
-								"{{host-fakejson}}"
+								"jsonplaceholder",
+								"typicode",
+								"com"
 							],
 							"path": [
 								"posts"
@@ -57,7 +60,7 @@
 					"response": []
 				},
 				{
-					"name": "T001-02 -Post one photograph ",
+					"name": "T001-02 -Post one photograph",
 					"event": [
 						{
 							"listen": "test",
@@ -90,12 +93,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"id\": 101,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  },\n\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0001_LNRyGwIJr5c.jpeg\",\n    \"id\": 102,\n    \"author\": \"Alejandro Escamilla\",\n    \"author_url\": \"https://unsplash.com/@alejandroescamilla\",\n    \"post_url\": \"https://unsplash.com/photos/LNRyGwIJr5c\"\n  }\n\t\n  ]"
+							"raw": "\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"photoId\": \"p1\",\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  }\n\t\n"
 						},
 						"url": {
-							"raw": "{{host-fakejson}}/posts",
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
 							"host": [
-								"{{host-fakejson}}"
+								"jsonplaceholder",
+								"typicode",
+								"com"
 							],
 							"path": [
 								"posts"
@@ -105,7 +111,7 @@
 					"response": []
 				},
 				{
-					"name": "T001-03-Post two photographs with comments",
+					"name": "T001-03-Post one photograph with comments",
 					"event": [
 						{
 							"listen": "test",
@@ -138,12 +144,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"id\": 10110,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\",\n  \"comment\": {\n  \n  \"postId\": 21,\n  \"id\": 101,\n  \"name\": \"perspiciatis magnam ut eum autem similique explicabo expedita\",\n  \"email\": \"Lura@rod.tv\",\n  \"body\": \"ut aut maxime officia sed aliquam et magni autem\\nveniam repudiandae nostrum odio enim eum optio aut\\nomnis illo quasi quibusdam inventore explicabo\\nreprehenderit dolor saepe possimus molestiae\"\n\n}\n  },\n\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0001_LNRyGwIJr5c.jpeg\",\n    \"id\": 10212,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  }\n\t\n  ]"
+							"raw": "\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"photoId\": 10110,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\",\n  \"comment\": {\n  \"postId\": 21,\n  \"name\": \"perspiciatis magnam ut eum autem similique explicabo expedita\",\n  \"email\": \"Lura@rod.tv\",\n  \"body\": \"ut aut maxime officia sed aliquam et magni autem\\nveniam repudiandae nostrum odio enim eum optio aut\\nomnis illo quasi quibusdam inventore explicabo\\nreprehenderit dolor saepe possimus molestiae\"\n\n}\n\t\n  }\n"
 						},
 						"url": {
-							"raw": "{{host-fakejson}}/posts",
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
 							"host": [
-								"{{host-fakejson}}"
+								"jsonplaceholder",
+								"typicode",
+								"com"
 							],
 							"path": [
 								"posts"
@@ -186,7 +195,7 @@
 					"response": []
 				},
 				{
-					"name": "T001 - 06 PUT update the author and author email address ",
+					"name": "T001 - 06 PUT update the author and author email address  of the photo",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -215,13 +224,13 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "\n{\"0\":{\"format\":\"jpeg\",\"width\":5616,\"height\":3744,\"filename\":\"0000_yC-Yzbqy7PY.jpeg\",\"id\":10110,\"author\":\"Sven\",\"author_url\":\"ST\",\"comment\":{\"postId\":21,\"id\":101,\"name\":\"perspiciatis magnam ut eum autem similique explicabo expedita\",\"email\":\"Lura@rod.tv\",\"body\":\"ut aut maxime officia sed aliquam et magni autem\\nveniam repudiandae nostrum odio enim eum optio aut\\nomnis illo quasi quibusdam inventore explicabo\\nreprehenderit dolor saepe possimus molestiae\"}},\"1\":{\"format\":\"jpeg\",\"width\":5616,\"height\":3744,\"filename\":\"0001_LNRyGwIJr5c.jpeg\",\"id\":10212,\"author\":\"Karlin Kappala\",\"author_url\":\"kk\"},\"id\":101}",
+							"raw": "{\n  \"format\": \"jpeg\",\n  \"width\": 5616,\n  \"height\": 3744,\n  \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n  \"photoId\": \"p1\",\n  \"author\": \"Sven\",\n  \"author_url\": \"st\",\n  \"id\": 101\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -259,7 +268,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://jsonplaceholder.typicode.com/posts/101",
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
 							"protocol": "https",
 							"host": [
 								"jsonplaceholder",
@@ -268,7 +277,7 @@
 							],
 							"path": [
 								"posts",
-								"101"
+								"1"
 							]
 						}
 					},
@@ -300,7 +309,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "Training 02: Automation Validation test cases for module photo  Copy",
+			"name": "Training 02: Automation Validation test cases for module photo  ",
 			"item": [
 				{
 					"name": "T001-01-Post registration",
@@ -312,9 +321,6 @@
 								"exec": [
 									"// wirte in console to get a quick view of the response ",
 									"console.log(responseBody);",
-									"",
-									"// once the test is run grab all the response, parse it in data object ",
-									"var data = JSON.parse(responseBody)",
 									"",
 									"//********************************************************************//",
 									"// Test Case 01  Verify if the test returns status code 201",
@@ -373,6 +379,9 @@
 									"    pm.expect(pm.response.text()).to.include(\"kappala\");",
 									"});",
 									"    ",
+									"   // ******  ADD MORE VERIFICATIONS HERE****??",
+									"    ",
+									"    ",
 									"}",
 									"",
 									"catch(e) {",
@@ -382,11 +391,7 @@
 									"    ",
 									"}",
 									"",
-									"//********************************************************************//",
-									"// Test Case 05 Verify if the response is same as the designed schema",
-									"",
 									"}",
-									"",
 									"",
 									"//********************************************************************//",
 									"// Test Case 06  Verify if the response has the defined content type",
@@ -404,11 +409,6 @@
 								"exec": [
 									"//**** date calculation ****//",
 									"",
-									"//test data ",
-									"var d = new Date();",
-									"",
-									"//***** base name*****//",
-									"",
 									"var d = new Date();",
 									"var n = d.getTime();",
 									"",
@@ -416,14 +416,6 @@
 									"",
 									"pm.environment.set(\"baseName1\", \"n\");",
 									"",
-									"//postman.setEnvironmentVariable(\"baseName\",n);",
-									"",
-									"//**** Current time ****//",
-									"",
-									"var d = new Date();",
-									"var n = d.getTime();",
-									"",
-									"pm.environment.set(\"currentTime1\", \"n\");",
 									"",
 									"",
 									"",
@@ -468,9 +460,6 @@
 									"// wirte in console to get a quick view of the response ",
 									"console.log(responseBody);",
 									"",
-									"// once the test is run grab all the response, parse it in data object ",
-									"var data = JSON.parse(responseBody)",
-									"",
 									"//********************************************************************//",
 									"// Test Case 01  Verify if the test returns status code 201",
 									"pm.test(\"Test Case 01  Verify if the test returns status code 201\", function () {",
@@ -493,6 +482,10 @@
 									"    ",
 									"    var jsonData = JSON.parse(responseBody);",
 									"    ",
+									"    //grab the object id and set it as a environemnt variable that can be used later ",
+									"pm.environment.set(\"id\", jsonData.id);",
+									"",
+									"pm.environment.set(\"responseBodyForPut\", responseBody);",
 									"",
 									"//validate the repsonse body ",
 									"        pm.test(\"Test Case 03: Body matches string\", function () {",
@@ -524,6 +517,7 @@
 									"        pm.expect(pm.response.text()).to.include(\"Karlin Kappala\");",
 									"        }); ",
 									"",
+									"   // ******  ADD MORE VERIFICATIONS HERE****??",
 									"",
 									"",
 									"    }",
@@ -553,11 +547,6 @@
 								"exec": [
 									"//**** date calculation ****//",
 									"",
-									"//test data ",
-									"var d = new Date();",
-									"",
-									"//***** base name*****//",
-									"",
 									"var d = new Date();",
 									"var n = d.getTime();",
 									"",
@@ -565,14 +554,6 @@
 									"",
 									"pm.environment.set(\"baseName1\", \"n\");",
 									"",
-									"//postman.setEnvironmentVariable(\"baseName\",n);",
-									"",
-									"//**** Current time ****//",
-									"",
-									"var d = new Date();",
-									"var n = d.getTime();",
-									"",
-									"pm.environment.set(\"currentTime1\", \"n\");",
 									"",
 									"",
 									"",
@@ -592,7 +573,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"id\": 101,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  },\n\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0001_LNRyGwIJr5c.jpeg\",\n    \"id\": 102,\n    \"author\": \"Alejandro Escamilla\",\n    \"author_url\": \"https://unsplash.com/@alejandroescamilla\",\n    \"post_url\": \"https://unsplash.com/photos/LNRyGwIJr5c\"\n  }\n\t\n  ]"
+							"raw": "\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"photoId\": \"p1\",\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  }\n\t\n"
 						},
 						"url": {
 							"raw": "{{host-fakejson}}/posts",
@@ -607,7 +588,7 @@
 					"response": []
 				},
 				{
-					"name": "T001-03-Post two photographs with comments",
+					"name": "T001-03-Post one photograph with comment",
 					"event": [
 						{
 							"listen": "test",
@@ -634,10 +615,6 @@
 									"",
 									"    var jsonData = JSON.parse(responseBody);",
 									"    ",
-									"//grab the object id and set it as a environemnt variable that can be used later ",
-									"pm.environment.set(\"id\", jsonData.id);",
-									"",
-									"pm.environment.set(\"responseBodyForPut\", responseBody);",
 									"",
 									"",
 									"//validate the repsonse body ",
@@ -678,6 +655,8 @@
 									"        pm.expect(pm.response.text()).to.include(\"Karlin Kappala\");",
 									"        }); ",
 									"",
+									"  // ******  ADD MORE VERIFICATIONS HERE****??",
+									"",
 									"",
 									"",
 									"    }",
@@ -695,7 +674,9 @@
 									"// Test Case 06  Verify if the response has the defined content type",
 									"pm.test(\"Test Case 06: Content-Type is present\", function () {",
 									"    pm.response.to.have.header(\"Content-Type\");",
-									"});"
+									"});",
+									"",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -707,11 +688,6 @@
 								"exec": [
 									"//**** date calculation ****//",
 									"",
-									"//test data ",
-									"var d = new Date();",
-									"",
-									"//***** base name*****//",
-									"",
 									"var d = new Date();",
 									"var n = d.getTime();",
 									"",
@@ -719,14 +695,6 @@
 									"",
 									"pm.environment.set(\"baseName1\", \"n\");",
 									"",
-									"//postman.setEnvironmentVariable(\"baseName\",n);",
-									"",
-									"//**** Current time ****//",
-									"",
-									"var d = new Date();",
-									"var n = d.getTime();",
-									"",
-									"pm.environment.set(\"currentTime1\", \"n\");",
 									"",
 									"",
 									"",
@@ -746,7 +714,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"id\": 10110,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\",\n  \"comment\": {\n  \n  \"postId\": 21,\n  \"id\": 101,\n  \"name\": \"perspiciatis magnam ut eum autem similique explicabo expedita\",\n  \"email\": \"Lura@rod.tv\",\n  \"body\": \"ut aut maxime officia sed aliquam et magni autem\\nveniam repudiandae nostrum odio enim eum optio aut\\nomnis illo quasi quibusdam inventore explicabo\\nreprehenderit dolor saepe possimus molestiae\"\n\n}\n  },\n\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0001_LNRyGwIJr5c.jpeg\",\n    \"id\": 10212,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\"\n\n  }\n\t\n  ]"
+							"raw": "\n  {\n    \"format\": \"jpeg\",\n    \"width\": 5616,\n    \"height\": 3744,\n    \"filename\": \"0000_yC-Yzbqy7PY.jpeg\",\n    \"photoId\": 10110,\n    \"author\": \"Karlin Kappala\",\n    \"author_url\": \"kk\",\n  \"comment\": {\n  \"postId\": 21,\n  \"name\": \"perspiciatis magnam ut eum autem similique explicabo expedita\",\n  \"email\": \"Lura@rod.tv\",\n  \"body\": \"ut aut maxime officia sed aliquam et magni autem\\nveniam repudiandae nostrum odio enim eum optio aut\\nomnis illo quasi quibusdam inventore explicabo\\nreprehenderit dolor saepe possimus molestiae\"\n\n}\n\t\n  }\n"
 						},
 						"url": {
 							"raw": "{{host-fakejson}}/posts",
@@ -768,37 +736,103 @@
 							"script": {
 								"id": "a06ab0c7-a311-4c62-819d-31392b646dc0",
 								"exec": [
+									"// wirte in console to get a quick view of the response ",
 									"console.log(responseBody);",
 									"",
-									"var data = JSON.parse(responseBody)",
+									"//********************************************************************//",
+									"// Test Case 01  Verify if the test returns status code 200",
+									"pm.test(\"Test Case 01  Verify if the test returns status code 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
 									"",
-									"tests[\"status code is 200\"]= responseCode.code ===200;",
+									"//********************************************************************//",
+									"// Test Case 02 Verify if the response time < 500ms",
+									"pm.test(\"Test Case 02 Verify if the response time < 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
 									"",
-									"postman.setNextRequest(\"T001 - 05 GET user information for a single user\")",
+									"    var jsonData = JSON.parse(responseBody);",
 									"",
 									"",
+									"//validate the repsonse body ",
 									"if(responseCode.code === 200)",
 									"{",
-									"    try{",
+									"    try{ ",
 									"    ",
 									"    var jsonData = JSON.parse(responseBody);",
 									"    ",
-									"    tests[\"Body matches string postId\"] = responseBody.has(\"postId\");",
-									"    tests[\"Body matches string id\"] =  responseBody.has(\"id\");",
-									"    tests[\"Body matches string access email\"] = responseBody.has(\"email\");",
-									"     tests[\"Body matches string access body\"] = responseBody.has(\"body\");",
-									"     ",
-									"    ",
-									"}",
+									"",
+									"//validate the repsonse body ",
+									"        pm.test(\"Test Case 03: Body matches string\", function () {",
+									"           pm.expect(pm.response.text()).to.include(\"postId\");",
+									"         });",
+									"        pm.test(\"Test Case 03: Body matches string\", function () {",
+									"           pm.expect(pm.response.text()).to.include(\"id\");",
+									"         });",
+									"        pm.test(\"Test Case 03 :Body matches string\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"name\");",
+									"        });",
+									"        pm.test(\"Test Case 04: Body matches string\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"email\");",
+									"        });",
+									"        pm.test(\"Test Case 04: Body matches string\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"body\");",
+									"        });",
+									"",
+									"",
+									"//******",
+									"",
+									"        pm.test(\"Test Case 04: Body matches string\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"21\");",
+									"        }); ",
+									"",
+									"  // ******  ADD MORE VERIFICATIONS HERE****??",
+									"",
+									"",
+									"",
+									"    }",
 									"",
 									"catch(e) {",
-									" console.log(\"cannot parse response, check the result\");",
+									"        console.log(\"cannot parse response, check the result\");",
 									" ",
-									" exit;",
+									"            exit;",
 									"    ",
+									"        }",
+									"",
 									"}",
 									"",
-									"}"
+									"//********************************************************************//",
+									"// Test Case 06  Verify if the response has the defined content type",
+									"pm.test(\"Test Case 06: Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"",
+									"",
+									"",
+									"//posstman.setNextRequest(\"T001 - 05 GET user information for a single user\")",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "d57ebce4-e538-4c70-a3b3-918b42486afd",
+								"exec": [
+									"//**** date calculation ****//",
+									"",
+									"var d = new Date();",
+									"var n = d.getTime();",
+									"",
+									"var n = \"QA Testing\" + d+ n;",
+									"",
+									"pm.environment.set(\"baseName1\", \"n\");",
+									"",
+									"",
+									"",
+									"",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -833,6 +867,8 @@
 								"exec": [
 									"var PutRequest = JSON.parse(environment[\"responseBodyForPut\"]);",
 									"",
+									"console.log(PutRequest);",
+									"console.log(\"responseBodyForPut\");",
 									"",
 									" PutRequest[0].author = \"Sven\";",
 									" PutRequest[0].author_url = \"ST\";",
@@ -940,7 +976,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://jsonplaceholder.typicode.com/posts/{{Putid}}",
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
 							"protocol": "https",
 							"host": [
 								"jsonplaceholder",
@@ -949,7 +985,7 @@
 							],
 							"path": [
 								"posts",
-								"{{Putid}}"
+								"1"
 							]
 						}
 					},
@@ -965,11 +1001,8 @@
 								"exec": [
 									"var PutRequest = JSON.parse(environment[\"responseBodyForPut\"]);",
 									"",
-									"",
-									"",
 									" PutRequest[0].comment = \"null\";",
 									" ",
-									"",
 									" ",
 									" postman.setEnvironmentVariable(\"putBody\", JSON.stringify(PutRequest));"
 								],
@@ -1023,8 +1056,8 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
+								"type": "text",
+								"value": "application/json"
 							}
 						],
 						"body": {
@@ -1037,7 +1070,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://jsonplaceholder.typicode.com/posts/{{Putid}}",
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
 							"protocol": "https",
 							"host": [
 								"jsonplaceholder",
@@ -1046,7 +1079,7 @@
 							],
 							"path": [
 								"posts",
-								"{{Putid}}"
+								"1"
 							]
 						}
 					},

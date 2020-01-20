@@ -26,20 +26,21 @@ Training set 1:
 Training set 2: 
 
 
-Training set 3 
+Training set 3: 
 
 Test runner collection in postman 
 
 Run tests in Newman 
 
-Run tests in docker 
-
-
-Newman run: 
 $ newman run examples/sample-collection.json
 
+Go to your source folder 
+Type the following command
 newman run com.kk.sample.postman.api.postman_collection.json  -e environments/host-fakejson.postman_environment.json  -r html,cli  --reporter-html-export reports/kk_sample_api_test.html  --reporter-html-template reports/templates/customTemplate.hbs
 
+Run the tests in Docker 
+
+Run the tests in Jenkins 
 
 
 # Run Postman Collections Using Docker
