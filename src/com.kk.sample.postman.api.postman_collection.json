@@ -487,6 +487,7 @@
 									"",
 									"pm.environment.set(\"responseBodyForPut\", responseBody);",
 									"",
+									"",
 									"//validate the repsonse body ",
 									"        pm.test(\"Test Case 03: Body matches string\", function () {",
 									"           pm.expect(pm.response.text()).to.include(\"format\");",
@@ -868,12 +869,12 @@
 									"var PutRequest = JSON.parse(environment[\"responseBodyForPut\"]);",
 									"",
 									"console.log(PutRequest);",
-									"console.log(\"responseBodyForPut\");",
 									"",
-									" PutRequest[0].author = \"Sven\";",
-									" PutRequest[0].author_url = \"ST\";",
+									" PutRequest.author = \"Sven\";",
+									" PutRequest.author_url = \"ST\";",
 									" ",
-									" ",
+									" console.log(PutRequest);",
+									"",
 									" postman.setEnvironmentVariable(\"putBody\", JSON.stringify(PutRequest));"
 								],
 								"type": "text/javascript"
@@ -968,7 +969,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{{putBody}}",
+							"raw": "{{putBody}}\n\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1001,7 +1002,7 @@
 								"exec": [
 									"var PutRequest = JSON.parse(environment[\"responseBodyForPut\"]);",
 									"",
-									" PutRequest[0].comment = \"null\";",
+									" PutRequest.comment = \"null\";",
 									" ",
 									" ",
 									" postman.setEnvironmentVariable(\"putBody\", JSON.stringify(PutRequest));"
